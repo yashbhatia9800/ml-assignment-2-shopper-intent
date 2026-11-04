@@ -74,7 +74,7 @@ ml-assignment-2-shopper-intent/
 |-- shopper_utils.py        feature lists, cleaning and metric helpers shared by trainer and app
 |-- train_models.py         split, grid search, evaluation and saving of the five models
 |-- analysis.py             confusion matrices, bootstrap intervals and correlations quoted below
-|-- ML_Assignment_2.ipynb   notebook that re-runs the whole pipeline (used on BITS Virtual Lab)
+|-- ML_Assignment_2.ipynb   notebook that re-runs the whole pipeline (written for BITS Virtual Lab)
 |-- data/online_shoppers_intention.csv   raw UCI file
 `-- .streamlit/config.toml  app theme
 ```
@@ -160,7 +160,7 @@ The full grid search takes a few minutes (the SVM dominates). The saved models w
 1. Go to <https://streamlit.io/cloud> and sign in with GitHub.
 2. Click **New app** and select this repository.
 3. Choose branch `main` and main file `app.py`.
-4. Keep the default Python version (3.12) under *Advanced settings*; it is the version the models were built with.
+4. Open *Advanced settings* and select Python 3.12, the version the models were built with (choose it before deploying).
 5. Click **Deploy**.
 
 ## Notes and limitations
