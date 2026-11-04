@@ -153,7 +153,7 @@ python analysis.py                          # confusion matrices, bootstrap inte
 
 The full grid search takes a few minutes (the SVM dominates). The saved models were built with scikit-learn 1.9.1 on Python 3.12, and scikit-learn pickles can only be loaded reliably with the same version, which is why `requirements.txt` pins exact versions.
 
-**BITS Virtual Lab:** open `ML_Assignment_2.ipynb` and run all cells from the repository root. The notebook trains and evaluates the five models into `lab_run/`, so the committed `model/` folder stays untouched.
+**BITS Virtual Lab:** open `ML_Assignment_2.ipynb` and run all cells. The notebook is self-contained: it installs the pinned library versions if needed, unpacks the project files if they are not next to it, and trains and evaluates the five models into `lab_run/`, so the committed `model/` folder (the one the Streamlit app loads) stays untouched.
 
 ## Deploy on Streamlit Community Cloud
 
