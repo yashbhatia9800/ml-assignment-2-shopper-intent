@@ -1,0 +1,92 @@
+{
+  "dataset": {
+    "name": "Online Shoppers Purchasing Intention (UCI id 468)",
+    "target": "Revenue",
+    "raw_rows": 12330,
+    "duplicates_removed": 125,
+    "rows_used": 12205,
+    "n_features": 17,
+    "positive_rate": 0.15632937320770177
+  },
+  "split": {
+    "train_rows": 9764,
+    "test_rows": 2441,
+    "train_positive_rate": 0.15628840639082342,
+    "test_positive_rate": 0.15649324047521507
+  },
+  "settings": {
+    "seed": 20261104,
+    "test_size": 0.2,
+    "cv_folds": 5,
+    "selection_metric": "MCC",
+    "tuned": true
+  },
+  "versions": {
+    "python": "3.12.16",
+    "scikit-learn": "1.9.1",
+    "pandas": "3.1.0",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "joblib": "1.6.0"
+  },
+  "models": {
+    "Logistic Regression": {
+      "file": "logistic_regression.joblib",
+      "candidates": 18,
+      "cv_mcc_mean": 0.5501286769806022,
+      "cv_mcc_std": 0.015290667128861323,
+      "selected_params": {
+        "C": 0.01,
+        "class_weight": "balanced"
+      },
+      "fit_seconds": 10.0
+    },
+    "Decision Tree": {
+      "file": "decision_tree.joblib",
+      "candidates": 192,
+      "cv_mcc_mean": 0.6065388713636187,
+      "cv_mcc_std": 0.020258630427168675,
+      "selected_params": {
+        "criterion": "gini",
+        "max_depth": 5,
+        "min_samples_leaf": 25,
+        "class_weight": null
+      },
+      "fit_seconds": 14.1
+    },
+    "KNN": {
+      "file": "knn.joblib",
+      "candidates": 28,
+      "cv_mcc_mean": 0.44506411675536084,
+      "cv_mcc_std": 0.016016669616461667,
+      "selected_params": {
+        "n_neighbors": 7,
+        "weights": "uniform",
+        "p": 2
+      },
+      "fit_seconds": 11.1
+    },
+    "Naive Bayes": {
+      "file": "naive_bayes.joblib",
+      "candidates": 10,
+      "cv_mcc_mean": 0.41222762615351016,
+      "cv_mcc_std": 0.01823341546433676,
+      "selected_params": {
+        "var_smoothing": 0.1
+      },
+      "fit_seconds": 1.4
+    },
+    "Support Vector Machine": {
+      "file": "svm.joblib",
+      "candidates": 30,
+      "cv_mcc_mean": 0.5951751921897578,
+      "cv_mcc_std": 0.015968368137631923,
+      "selected_params": {
+        "C": 10,
+        "gamma": 0.003,
+        "class_weight": "balanced"
+      },
+      "fit_seconds": 98.6
+    }
+  }
+}
